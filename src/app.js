@@ -4,7 +4,7 @@ const app = require('./js/app-module');
 const template = require('./template.html');
 const homeTemplate = require('./home.html');
 
-import './css/main.css';
+// const mainCSS = require('./css/main.css');
 
 app.config( function($stateProvider, $urlRouterProvider) {
 

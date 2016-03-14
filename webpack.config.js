@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "full-stack test"
-    }),
+    })],
   module: {
     preLoaders: [
             {

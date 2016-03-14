@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "MEAN stack test",
   "main": "server.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "start": "nodemon server.js",
+    "app-start": "webpack-dev-server --inline",
+    "build": "webpack",
     "test": "mocha"
   },
   "repository": {
