@@ -7,8 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha",
-    "start": "node server.js"
+    "start": "nodemon server.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,19 @@
   },
   "homepage": "https://github.com/wmharvey/full-stack-test#readme",
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-resource": "^1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "body-parser": "^1.15.0",
     "express-restify-mongoose": "^3.1.1",
     "mongoose": "^4.4.7"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.10.0",
+    "jshint": "^2.9.1",
+    "jshint-loader": "^0.8.3",
+    "style-loader": "^0.13.0"
   }
 }
