@@ -4,11 +4,11 @@ const app = require('./js/app-module');
 const template = require('./template.html');
 const homeTemplate = require('./home.html');
 
-// const mainCSS = require('./css/main.css');
+const mainCSS = require('./css/main.css');
 
 app.config( function($stateProvider, $urlRouterProvider) {
 
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/images');
 
   $stateProvider
     .state( 'home', {
@@ -19,10 +19,20 @@ app.config( function($stateProvider, $urlRouterProvider) {
           return ImageService.query().$promise;
         }
       },
-      controller: function( $scope, images ) {
+      controller: function( $scope, images, ImageService ) {
         $scope.images = images;
+        $scope.addImage = function() {
+          ImageService.save({}, {caption: $scope.new.caption, image: $scope.new.url})
+            .$promise.then( function(img) {
+              $scope.images.push(img);
+            });
+        };
       }
     });
+});
+
+app.run(function($rootScope, $state) {
+
 });
 
 document.body.innerHTML = template;

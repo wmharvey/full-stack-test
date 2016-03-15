@@ -7,7 +7,10 @@
     "start": "nodemon server.js",
     "app-start": "webpack-dev-server --inline",
     "build": "webpack",
-    "test": "mocha"
+    "test-api": "mocha test-api",
+    "test-e2e": "protractor",
+    "update-webdriver": "webdriver-manager update",
+    "start-webdriver": "webdriver-manager start"
   },
   "repository": {
     "type": "git",
@@ -27,15 +30,21 @@
     "angular-resource": "^1.5.0",
     "angular-ui-router": "^0.2.18",
     "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
     "express-restify-mongoose": "^3.1.1",
     "mongoose": "^4.4.7"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
     "css-loader": "^0.23.1",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.10.0",
     "jshint": "^2.9.1",
     "jshint-loader": "^0.8.3",
-    "style-loader": "^0.13.0"
+    "protractor": "^3.1.1",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   }
 }

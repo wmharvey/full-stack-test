@@ -4,13 +4,17 @@ const router = express.Router();
 const path = require('path');
 const restify = require('express-restify-mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const imageModel = require('./models/Image.js');
+
+app.use(cors());
+app.options('*', cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use( express.static( path.join(__dirname, '/public') ) );
+app.use( express.static( path.join(__dirname, '/dist') ) );
 
 restify.serve(router, imageModel);
 app.use(router);

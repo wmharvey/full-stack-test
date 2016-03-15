@@ -1,16 +1,18 @@
 <div>
 
   <div id="image-container">
-    <div ng-repeat="image in images">
-      <img class="img" ng-src="{{image.image}}" alt="missing image">
+    <div ng-repeat="image in images" class="img">
+      <img ng-src="{{image.image}}" alt="missing image">
       <div>{{image.caption}}</div>
     </div>
   </div>
 
+  <div>Add a new image:</div>
+
   <form name="imageForm" novalidate>
     <input type="url" ng-model="new.url" placeholder="Enter image url here" name="url">
     <input type="text" ng-model="new.caption" placeholder="Enter caption here" name="caption">
-    <button ng-click="addImage()">Add</button>
+    <button ng-click="addImage()" id="add-button">Add</button>
   </form>
 
 </div>

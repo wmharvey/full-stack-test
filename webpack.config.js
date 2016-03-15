@@ -5,7 +5,7 @@ const path = require( 'path' );
 module.exports = {
   entry: './src/app.js',
   output: {
-    path: path.resolve( __dirname, '/dist/public' ),
+    path: path.resolve( __dirname, 'dist' ),
     filename: 'bundle.js'
   },
   devtool: 'source-map',
@@ -24,10 +24,7 @@ module.exports = {
     loaders: [
       { test: /\.css$/,loader: 'style!css'},
       { test: /\.less$/, loader: 'style-loader!css-loader!less-loader' },
-      {
-        test: /\.html$/,
-        loader: 'html'
-      }
+      { test: /\.html$/, loader: 'html' }
     ]
   },
   jshint: {
